@@ -86,6 +86,20 @@ class Matrix:
                 result[(i,j)] = rowsum
         return result
 
+# A class derived from unittest.TestCase is used to actually write the tests
+# methods in this class that start with "test" will automatically be detected
+# By the testing framework
+class TestMatrix(unittest.TestCase):
+
+    # test that a matrix is initialized to all zeros
+    # Note: stylistically it is a good idea to make the names for
+    # test cases verbose as these are what you see when the test fails
+    # and they are not called during the normal operation of your program
+    def test_matrix_initted_to_zeros(self):
+        # assertEqual is an assertion function that verifies that its
+        # two arguments are equal to each other
+        self.assertEqual(Matrix(2,2)[(1, 1)], 0)
+
 # When we run this code as a program, the unittest test runner will execute
 # Try running this code and see what happens.   Note that no tests will run
 # because we have not created any yet
