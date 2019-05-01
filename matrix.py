@@ -1,3 +1,16 @@
+import unittest
+# unittest is the unittesting framework we are using. It is standard python
+# Other testing frameworks include nose2 and pytest.
+# They will be explored later in this tutorial.
+# An advantages of unittest over pytest:
+#    Built in to the python standard library
+# Disadvantages of unittest over pytest:
+#    Requires special assertion functions
+#    More boilerplate than pytest
+
+  
+
+
 """ Example Matrix class for docstrings and testing in python.
 
 Basic math classes used for demonstrating how code can be documented
