@@ -90,7 +90,6 @@ class Matrix:
 # methods in this class that start with "test" will automatically be detected
 # By the testing framework
 class TestMatrix(unittest.TestCase):
-
     # test that a matrix is initialized to all zeros
     # Note: stylistically it is a good idea to make the names for
     # test cases verbose as these are what you see when the test fails
@@ -99,6 +98,11 @@ class TestMatrix(unittest.TestCase):
         # assertEqual is an assertion function that verifies that its
         # two arguments are equal to each other
         self.assertEqual(Matrix(2,2)[(1, 1)], 0)
+
+    # test that multiplying incompatible matrix dimensions raises an exception
+    def test_matrix_mult_incompatible_dimensions_exception(self):
+        with self.assertRaises(Exception):
+            Matrix(3,3)*Matrix(1,2)
 
 # When we run this code as a program, the unittest test runner will execute
 # Try running this code and see what happens.   Note that no tests will run
