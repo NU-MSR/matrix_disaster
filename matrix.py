@@ -39,7 +39,7 @@ class Matrix:
         """
         self.__rows = n
         self.__cols = m
-        self.__data = [None] * n * m
+        self.__data = [0] * n * m
 
     @property
     def rows(self):
