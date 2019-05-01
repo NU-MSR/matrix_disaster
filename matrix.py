@@ -8,7 +8,7 @@ import unittest
 #    Requires special assertion functions
 #    More boilerplate than pytest
 
-  
+ 
 
 
 """ Example Matrix class for docstrings and testing in python.
@@ -85,4 +85,11 @@ class Matrix:
                     rowsum += self[(i,k)] * rhs[(k,i)]
                 result[(i,j)] = rowsum
         return result
-                
+
+# When we run this code as a program, the unittest test runner will execute
+# Try running this code and see what happens.   Note that no tests will run
+# because we have not created any yet
+# pass --help to see some options that you have
+if __name__ == '__main__':
+    unittest.main()
+
